@@ -1,6 +1,5 @@
 package com.example.coffeehead
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +8,7 @@ import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_row_hero.view.*
 
 class ListCoffeeAdapter(
-    private val listCoffee: ArrayList<Coffee>, val context: Context
+    private val listCoffee: ArrayList<Coffee>
 ) : RecyclerView.Adapter<ListCoffeeAdapter.ViewHolder>() {
 
     private var onItemClickCallback: OnItemClickCallback? = null
