@@ -1,7 +1,7 @@
 package com.example.coffeehead
 
 import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
+import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Coffee (
