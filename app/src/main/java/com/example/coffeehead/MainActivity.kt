@@ -26,7 +26,11 @@ class MainActivity : AppCompatActivity() {
 
         listCoffeeAdapter.setOnItemClickCallback(object : ListCoffeeAdapter.OnItemClickCallback {
             override fun onItemClicked(data: Coffee) {
-                Toast.makeText(this@MainActivity, data.toString(), Toast.LENGTH_LONG).show()
+//                Toast.makeText(this@MainActivity, data.toString(), Toast.LENGTH_LONG).show()
+
+                val intentWithData = Intent(this@MainActivity, DetailActivity::class.java)
+                intentWithData.putExtra(DetailActivity.EXTRA_DETAIL, data)
+                startActivity(intentWithData)
             }
         })
     }
