@@ -36,16 +36,26 @@ class MainActivity : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
+    /**
+     * See {@linktourl https://developer.android.com/guide/topics/ui/menus}
+     */
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        setMode(item.itemId)
-        return super.onOptionsItemSelected(item)
-    }
-    private fun setMode(SelectedMode: Int){
-        when(SelectedMode){
-            R.id.action_about->{
-                val intent = Intent(this@MainActivity,About::class.java)
+        return when (item.itemId) {
+            R.id.action_about -> {
+                val intent = Intent(this@MainActivity, About::class.java)
                 startActivity(intent)
+                true
             }
+            else -> super.onOptionsItemSelected(item)
         }
     }
+
+//    private fun setMode(SelectedMode: Int) {
+//        when (SelectedMode) {
+//            R.id.action_about -> {
+//                val intent = Intent(this@MainActivity, About::class.java)
+//                startActivity(intent)
+//            }
+//        }
+//    }
 }
